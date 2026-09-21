@@ -1,0 +1,265 @@
+@import "tailwindcss";
+
+:root {
+  /* Surface & Page Backgrounds */
+  --color-bg-primary: #09090b;
+  --color-bg-secondary: #060708;
+  --color-surface-card: #111113;
+  --color-surface-elevated: #18181b;
+  --color-surface-interactive: #27272a;
+  --color-surface-interactive-hover: #3f3f46;
+
+  /* Glass Effects */
+  --color-glass: rgba(255, 255, 255, 0.04);
+  --color-glass-dark: rgba(9, 9, 11, 0.85);
+
+  /* Border Colors */
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-light: rgba(255, 255, 255, 0.1);
+  --color-border-default: #27272a;
+  --color-border-muted: #3f3f46;
+  --color-border-hover: #52525b;
+
+  /* Typography / Text Colors */
+  --color-text-primary: #ffffff;
+  --color-text-body: #e4e4e7;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+  --color-text-dim: #52525b;
+  --color-text-disabled: #3f3f46;
+
+  /* Accent & Action Colors */
+  --color-accent-primary: #ffffff;
+  --color-accent-contrast: #000000;
+  --color-accent-hover: #f4f4f5;
+
+  /* Brand / WhatsApp */
+  --color-brand-whatsapp: #25d366;
+  --color-brand-whatsapp-hover: #22c55e;
+  --color-brand-whatsapp-bg: rgba(37, 211, 102, 0.1);
+  --color-brand-whatsapp-border: rgba(37, 211, 102, 0.25);
+  --color-brand-whatsapp-glow: rgba(37, 211, 102, 0.35);
+
+  /* Brand Logo Accent */
+  --color-logo-stroke: #d4af37;
+  --color-logo-fill: rgba(212, 175, 55, 0.08);
+
+  /* Zinc Palette Scale */
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #111113;
+  --color-zinc-850: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-600: #52525b;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-100: #f4f4f5;
+}
+
+@theme {
+  --color-bg-primary: var(--color-bg-primary);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-surface-card: var(--color-surface-card);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-surface-interactive: var(--color-surface-interactive);
+  --color-surface-interactive-hover: var(--color-surface-interactive-hover);
+
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-light: var(--color-border-light);
+  --color-border-default: var(--color-border-default);
+  --color-border-muted: var(--color-border-muted);
+  --color-border-hover: var(--color-border-hover);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-body: var(--color-text-body);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-dim: var(--color-text-dim);
+  --color-text-disabled: var(--color-text-disabled);
+
+  --color-accent-primary: var(--color-accent-primary);
+  --color-accent-contrast: var(--color-accent-contrast);
+  --color-accent-hover: var(--color-accent-hover);
+
+  --color-brand-whatsapp: var(--color-brand-whatsapp);
+  --color-brand-whatsapp-hover: var(--color-brand-whatsapp-hover);
+
+  --color-zinc-950: var(--color-zinc-950);
+  --color-zinc-900: var(--color-zinc-900);
+  --color-zinc-850: var(--color-zinc-850);
+  --color-zinc-800: var(--color-zinc-800);
+  --color-zinc-700: var(--color-zinc-700);
+  --color-zinc-600: var(--color-zinc-600);
+  --color-zinc-500: var(--color-zinc-500);
+  --color-zinc-400: var(--color-zinc-400);
+  --color-zinc-300: var(--color-zinc-300);
+  --color-zinc-200: var(--color-zinc-200);
+  --color-zinc-100: var(--color-zinc-100);
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-zinc-700);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-zinc-600);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Glass utility */
+.glass {
+  background: var(--color-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: var(--color-glass-dark);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Gradient overlay for card images */
+.card-gradient {
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    color-mix(in srgb, var(--color-bg-primary) 60%, transparent) 70%,
+    var(--color-bg-primary) 100%
+  );
+}
+
+/* Calendar styles */
+.calendar-day {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.calendar-day:hover:not(.disabled):not(.selected) {
+  background: var(--color-border-light);
+  color: var(--color-text-primary);
+}
+
+.calendar-day.in-range {
+  background: var(--color-glass);
+  color: var(--color-text-primary);
+  border-radius: 0;
+}
+
+.calendar-day.range-start {
+  background: var(--color-accent-primary);
+  color: var(--color-accent-contrast);
+  font-weight: 700;
+  border-radius: 6px 0 0 6px;
+}
+
+.calendar-day.range-end {
+  background: var(--color-accent-primary);
+  color: var(--color-accent-contrast);
+  font-weight: 700;
+  border-radius: 0 6px 6px 0;
+}
+
+.calendar-day.selected {
+  background: var(--color-accent-primary);
+  color: var(--color-accent-contrast);
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.calendar-day.today:not(.selected):not(.in-range):not(.range-start):not(.range-end) {
+  border: 1px solid var(--color-border-hover);
+  color: var(--color-text-primary);
+}
+
+.calendar-day.disabled {
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+.calendar-day.range-start.range-end {
+  border-radius: 6px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease both;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.25s ease both;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
