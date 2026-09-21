@@ -34,7 +34,7 @@ const GALLERY_TIERS = [
   {
     title: "Daily Luxury & Protocol",
     subtitle: "Reliable Nigerian road masters for daily errands & convoys",
-    image: "/api/car-image/toyota_prado_txl_1789978414377.jpg",
+    image: "/toyota_prado_txl_1789978414377.jpg",
     examples: "Toyota Prado · Lexus ES350 · Hilux Escort",
     badge: "Road Masters",
     Icon: DirectionsCarFilledIcon,

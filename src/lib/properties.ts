@@ -39,9 +39,9 @@ export const listing: Vehicle[] = [
     chauffeurFeePerDay: 50000,
     rating: 4.98,
     reviewCount: 42,
-    image: "/api/car-image/rolls_royce_ghost_1789978376505.jpg",
+    image: "/rolls_royce_ghost_1789978376505.jpg",
     images: [
-      "/api/car-image/rolls_royce_ghost_1789978376505.jpg",
+      "/rolls_royce_ghost_1789978376505.jpg",
       "https://images.unsplash.com/photo-1563720223185-11003d516935?w=1000&q=80&auto=format&fit=crop",
     ],
     amenities: [
@@ -72,9 +72,9 @@ export const listing: Vehicle[] = [
     chauffeurFeePerDay: 50000,
     rating: 4.97,
     reviewCount: 56,
-    image: "/api/car-image/lamborghini_urus_1789978487701.jpg",
+    image: "/lamborghini_urus_1789978487701.jpg",
     images: [
-      "/api/car-image/lamborghini_urus_1789978487701.jpg",
+      "/lamborghini_urus_1789978487701.jpg",
     ],
     amenities: [
       "High-Performance Super SUV",
@@ -169,9 +169,9 @@ export const listing: Vehicle[] = [
     chauffeurFeePerDay: 25000,
     rating: 4.96,
     reviewCount: 98,
-    image: "/api/car-image/toyota_land_cruiser_300_1789978397588.jpg",
+    image: "/toyota_land_cruiser_300_1789978397588.jpg",
     images: [
-      "/api/car-image/toyota_land_cruiser_300_1789978397588.jpg",
+      "/toyota_land_cruiser_300_1789978397588.jpg",
     ],
     amenities: [
       "Flagship VIP SUV",
@@ -201,9 +201,9 @@ export const listing: Vehicle[] = [
     chauffeurFeePerDay: 20000,
     rating: 4.95,
     reviewCount: 164,
-    image: "/api/car-image/toyota_prado_txl_1789978414377.jpg",
+    image: "/toyota_prado_txl_1789978414377.jpg",
     images: [
-      "/api/car-image/toyota_prado_txl_1789978414377.jpg",
+      "/toyota_prado_txl_1789978414377.jpg",
     ],
     amenities: [
       "Nigerian Road Master",
@@ -233,9 +233,9 @@ export const listing: Vehicle[] = [
     chauffeurFeePerDay: 15000,
     rating: 4.93,
     reviewCount: 110,
-    image: "/api/car-image/lexus_es350_1789978430936.jpg",
+    image: "/lexus_es350_1789978430936.jpg",
     images: [
-      "/api/car-image/lexus_es350_1789978430936.jpg",
+      "/lexus_es350_1789978430936.jpg",
     ],
     amenities: [
       "Quiet Executive Comfort",
@@ -265,9 +265,9 @@ export const listing: Vehicle[] = [
     chauffeurFeePerDay: 15000,
     rating: 4.91,
     reviewCount: 88,
-    image: "/api/car-image/toyota_hilux_1789978454695.jpg",
+    image: "/toyota_hilux_1789978454695.jpg",
     images: [
-      "/api/car-image/toyota_hilux_1789978454695.jpg",
+      "/toyota_hilux_1789978454695.jpg",
     ],
     amenities: [
       "Convoy & Security Escort",
@@ -301,5 +301,5 @@ export const brand: brandProperties = {
   phone: "2349033572229",
   location: "Lagos & Abuja",
   currency: "₦",
-  hero_image: "/api/car-image/rolls_royce_ghost_1789978376505.jpg",
+  hero_image: "/rolls_royce_ghost_1789978376505.jpg",
 };

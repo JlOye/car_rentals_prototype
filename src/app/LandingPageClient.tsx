@@ -121,7 +121,7 @@ export default function LandingPageClient({
       <section className="relative min-h-[72vh] sm:min-h-[85vh] flex items-end pb-8 sm:pb-16 px-4 sm:px-6 pt-12 sm:pt-14 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/api/car-image/rolls_royce_ghost_1789978376505.jpg"
+            src="/rolls_royce_ghost_1789978376505.jpg"
             alt="Luxury automotive"
             className="w-full h-full object-cover object-center"
           />
